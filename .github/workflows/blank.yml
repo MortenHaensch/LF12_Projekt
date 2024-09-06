@@ -1,1 +1,21 @@
+name: Create Issue on Push
+
+on:
+  push:
+    paths:
+      - '**/*'  # Reagiert auf Änderungen in allen Dateien
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create GitHub Issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --repo ${{ github.repository }} --title "Neues Issue nach Push" --body "Ein neues Issue wurde erstellt, weil eine Datei gepusht wurde."
 
