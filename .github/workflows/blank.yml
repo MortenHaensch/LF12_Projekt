@@ -1,8 +1,6 @@
 name: LF12_Projekt Weekly
 on:
-  schedule:
-    - cron: "00 2 * * 5"
-    - cron: "00 10 * * *"
+  push
 jobs:
   track_pr:
     runs-on: ubuntu-latest
