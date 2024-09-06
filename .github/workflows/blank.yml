@@ -1,6 +1,6 @@
 name: LF12_Projekt Weekly
 on:
-  push
+  push:
 jobs:
   track_pr:
     runs-on: ubuntu-latest
