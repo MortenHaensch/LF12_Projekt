@@ -1,12 +1,1 @@
-name: LF12_Projekt Weekly
-on:
-  push:
-
-jobs:
-  track_pr:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          gh issue create --title "Projekt_LF12 Weekly" --body "Beschreibung: Austausch zum aktuellen Stand des Projektes, bei Unklarheiten ggf. Herrn Scheetz ansprechen" --repo $GITHUB_REPOSITORY
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+test
